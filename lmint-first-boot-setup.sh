@@ -28,10 +28,11 @@ sudo wget "http://downloads.sourceforge.net/project/eosmdmlogin/eOS.tar.gz" -P /
 cd /usr/share/mdm/html-themes/
 sudo tar xf eOS.tar.gz
 sudo rm -f eOS.tar.gz
+cd ~
 
 ##### Install Source Code Pro font #####
 wget "http://downloads.sourceforge.net/project/sourcecodepro.adobe/SourceCodePro_FontsOnly-1.017.zip"
-mkdir "~/.fonts"
+mkdir ~/.fonts
 unzip SourceCode*.zip -d ~/.fonts
 sudo rm -f SourceCode*.zip
 
@@ -47,8 +48,9 @@ sudo rm -f adt*.zip
 
 ##### Upgrade #####
 sudo apt-get update
-sudo apt-get dist-upgrade
+sudo apt-get -qfy install # Fix broken dependencies
+sudo apt-get -qy dist-upgrade
 
 ##### Clean #####
-sudo apt-get autoremove
-sudo apt-get autoclean
+sudo apt-get -y autoremove
+sudo apt-get -y autoclean
