@@ -18,7 +18,7 @@ sudo add-apt-repository -y ppa:ricotz/docky
 sudo apt-get update
 
 ##### Install software #####
-sudo apt-get install -qy deluge sublime-text git filezilla plank vimix-flat-themes spotify-client bleachbit netbeans gufw trimage imagemagick nodejs* npm numix-theme numix-plank-theme libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 ia32-libs icns2png
+sudo apt-get install -qy deluge sublime-text git filezilla plank vimix-flat-themes spotify-client bleachbit netbeans gufw trimage imagemagick nodejs* npm numix-theme numix-plank-theme libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 ia32-libs icnsutils
 
 ##### Install Flattr icons #####
 sudo git clone "https://github.com/NitruxSA/flattr-icons.git" /usr/share/icons/flattr-icons
