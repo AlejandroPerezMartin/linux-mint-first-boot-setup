@@ -6,6 +6,10 @@
 #  Apr 03, 2014                                 #
 #################################################
 
+##### Upgrade #####
+sudo apt-get update
+sudo apt-get -qy dist-upgrade
+
 ##### Remove software #####
 sudo apt-get purge -qy tomboy thunderbird* simple-scan gthumb pidgin xchat* libreoffice-calc libreoffice-base brasero* banshee vlc* transmission*
 
@@ -46,10 +50,8 @@ sudo rm -f *chrome*.deb
 unzip adt*.zip -d ~
 sudo rm -f adt*.zip
 
-##### Upgrade #####
-sudo apt-get update
-sudo apt-get -qfy install # Fix broken dependencies
-sudo apt-get -qy dist-upgrade
+##### Fix broken dependencies #####
+sudo apt-get -qfy install
 
 ##### Clean #####
 sudo apt-get -y autoremove
