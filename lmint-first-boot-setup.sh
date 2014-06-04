@@ -3,7 +3,7 @@
 #################################################
 #  Written By: Alejandro Perez Martin           #
 #  Purpose: Custom Linux Mint first boot setup  #
-#  June 3, 2014                                 #
+#  June 4, 2014                                 #
 #################################################
 
 ##### Upgrade #####
@@ -92,7 +92,6 @@ echo "DIRECTORY IS: /opt/komodo-ide"
 sudo sh install.sh
 cd ..
 sudo rm -f Komodo*.zip
-
 
 ##### Fix broken dependencies #####
 sudo apt-get -qfy install
