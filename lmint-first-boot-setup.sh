@@ -40,7 +40,7 @@ sudo git clone "https://github.com/NitruxSA/flattr-icons.git" /usr/share/icons/f
 ##### Install eOS Login Screen #####
 sudo wget -c "http://downloads.sourceforge.net/project/eosmdmlogin/eOS.tar.gz" -P /usr/share/mdm/html-themes
 cd /usr/share/mdm/html-themes/
-sudo tar xf eOS.tar.gz
+sudo tar -xf eOS.tar.gz
 sudo rm -f eOS.tar.gz
 cd ~
 
@@ -77,6 +77,23 @@ fi
 unzip adt*.zip -d ~
 sudo rm -f adt*.zip
 
+##### Install Komodo IDE 32/64 bits #####
+if [ $(getconf LONG_BIT) -eq 32 ]
+then
+    wget -c "http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-linux-x86.tar.gz"
+else
+    wget -c "http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-linux-x86_64.tar.gz"
+fi
+
+sudo mkdir /opt/komodo-ide
+tar -xf Komodo*.tar.gz
+cd Komodo*
+echo "DIRECTORY IS: /opt/komodo-ide"
+sudo sh install.sh
+cd ..
+sudo rm -f Komodo*.zip
+
+
 ##### Fix broken dependencies #####
 sudo apt-get -qfy install
 
@@ -96,5 +113,8 @@ gsettings set org.nemo.desktop home-icon-visible true
 gsettings set org.nemo.desktop trash-icon-visible true
 gsettings set org.nemo.desktop computer-icon-visible false
 
-# Restart Cinnamon
+##### Restart Cinnamon #####
 cinnamon --replace
+
+##### Exit script #####
+exit
