@@ -46,6 +46,7 @@ git config --global user.email "aleperez92@gmail.com"
 ##### Install Flattr icons #####
 sudo git clone "https://github.com/NitruxSA/flattr-icons.git" /usr/share/icons/flattr-icons
 
+
 ##### Install eOS Login Screen #####
 sudo wget -c "http://downloads.sourceforge.net/project/eosmdmlogin/eOS.tar.gz" -P /usr/share/mdm/html-themes
 cd /usr/share/mdm/html-themes/
